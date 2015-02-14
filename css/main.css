@@ -7,6 +7,7 @@
 body {
   font-family: 'Nunito', sans-serif;
   color: #384047;
+  background-color: #A3C2C2;
 }
 
 form {
@@ -85,9 +86,10 @@ button {
 }
 
 button:hover{
-  background-color: rgba(75,201,112,.5);
+/*  background-color: rgba(75,201,112,.5);*/
   border: 1px solid rgba(58,193,98,.3);
   border-width: 1px 1px 5px;
+  background-color: #C3E3DB;
 
 
 }
@@ -134,12 +136,55 @@ span {
   border-radius: 100%;
 }
 
+.img-responsive {
+  margin-left: 225px;
+}
+
+h3 {
+  font-family: 'Nunito', sans-serif;
+  background-color: #D1E0E0;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#whatstation {
+  background-color: #D1E0E0;
+}
+
+#tellaboutyou {
+  background-color: #D1E0E0;
+}
+
 .train-direction{
   display: inline-block;
   margin: 5px 65px;
   text-align: center;
 }
 
+.btn-default:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background-color: #C3E3DB;
+
+}
+
+
+span {
+  background-color: #006699;
+
+}
+
+.btn-default {
+  background-color: #68BAA6;
+    &:hover:{
+    background-color: #C3E3DB;
+    border-color: #C3E3DB;
+  }
+}
+
+button {
+  background-color: #68BAA6;
+  border: #68BAA6;
+   
+}
 @media screen and (min-width: 480px) {
 
   form {
