@@ -39,7 +39,33 @@ date: 1/30/15
     .leaflet-popup-content img {width: 100px;}
     a {border: none;}
   </style>
+  <script>
+  $(document).ready(function(){
+    $("#create_account").on("click", function(e){
+      e.preventDefault();
 
+      var accountSid = 'ACa277d2ee7030baad544f00141ff7a5b2'; 
+      var authToken = '[AuthToken]'; 
+       
+
+      var userName = $("#user_name").val();
+      var userPhoneNumber = $("#user_phone").val()      
+      var userUserName = $("#user_username").val();
+
+      //require the Twilio module and create a REST client 
+      var client = require('twilio')(accountSid, authToken);        
+      client.messages.create({ 
+        to: "+1"+userPhoneNumber, 
+        from: "+19148254651", 
+        body: "@subwaystation",   
+      }, function(err, message) {  
+        console.log(message.sid); 
+      });
+
+      
+    })
+  });
+  </script>
 </head>
 <body>
 
@@ -79,16 +105,16 @@ date: 1/30/15
    <legend><span>1</span> Tell us about you!</legend>
      
       <label for="name">Name:</label>   
-      <input type="text" id="name" name="user_name" placeholder="Full Name">
+      <input type="text" id="user_name" name="user_name" placeholder="Full Name">
       
       <label for="last">User Name:</label>
-      <input type="text" id="last" name="user_nickname" placeholder="Choose UserName">
+      <input type="text" id="user_nickname" name="user_nickname" placeholder="Choose UserName">
        
-      <label for="email">E-mail</label>  
-      <input type="email" id="email" name="user_email" placeholder="Name@Example.com">
+      <label for="email">Phone Number</label>  
+      <input type="email" id="phone_number" name="phone_number" placeholder="Name@Example.com">
       
       <a href="shareride.html" "target=_blank">
-      <button>
+      <button id="create_account">
         <input type="submit" name="create-account" value="Create Account">
       </button>
       </a>
