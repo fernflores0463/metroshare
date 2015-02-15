@@ -9,3 +9,16 @@ body {
 p {
 	background-color: orange;
 }
+
+input {
+		padding: 15px;
+		font-size: 16px;
+		background-color: #e8eeef;
+		margin-bottom: 30px;
+		border: none;
+
+	}
+.buttons{
+	font-size: 15px;
+	padding:13px;
+}
